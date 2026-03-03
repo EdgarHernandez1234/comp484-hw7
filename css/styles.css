@@ -100,7 +100,7 @@ h3 {
 ul { margin: 8px 0 0 20px; color: var(--color-muted); } /* For lists in projects and education sections */
 
 
-.content-wrap { /* First part complete */
-  width: 950px;
+.content-wrap { /* Second part complete */
+  max-width: 950px;
   margin: 0 auto;
 }
