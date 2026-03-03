@@ -1,10 +1,10 @@
 /* Color Palette
-# - color 1
-# - color 2
-# - color 3
-# - color 4
+# - color 1 #64789a
+# - color 2 #5fa3a3
+# - color 3 #1f2933
+# - color 4 #6b7280
 */
-
+/* .content-wrap will be at the bottom */
 :root {
   --color-bg: #f6f7f9;
   --color-primary: #64789a; /* h2 and Header color */
@@ -15,22 +15,14 @@
 
 /* Global styles 
 ------------------------------------*/
-* { box-sizing: border-box; }
-html, body { height: 100%; }
+
 body {
-  margin: 0;
   font-family: "Gelasio", Arial; /* Gelasio is the google font I imported, Arial for body */
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.5;
+  margin: 0; /* Remove default margin */
 }
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
 
 /* Header & Footer 
 ------------------------------------*/
@@ -45,6 +37,7 @@ footer {
   padding: 20px 24px;
   text-align: center;
   font-size: 14px;
+  text-align: center;
 }
 header img { /* For the profile picture in header */
   width: 96px;
@@ -61,6 +54,7 @@ header h1 {  /* For h1 in header */
 }
 header h2 { /* For h2 in header */
   margin: 4px 0 8px 0;
+  margin-top: 0;
   font-weight: 500;
   color: rgba(230,238,252,0.95);
 }
@@ -74,7 +68,6 @@ main {
 }
 
 section {
-  margin-bottom: 24px;
   background: #fff;
   border-radius: 6px;
   padding: 18px;
@@ -85,10 +78,10 @@ section {
 ------------------------------------*/
 h2 {
   font-size: 18px;
-  margin: 0 0 12px 0;
   font-weight: 600;
   color: var(--color-primary);
   font-family: "Source Sans 3", sans-serif;  /* Source Sans 3 is the google font I imported for section headers, sans-serif as fallback */
+  margin-top: 0; /* Remove default top margin */
 }
 h3 {
   margin: 8px 0;
@@ -103,4 +96,9 @@ ul { margin: 8px 0 0 20px; color: var(--color-muted); } /* For lists in projects
 .content-wrap { /* Second part complete */
   max-width: 950px;
   margin: 0 auto;
+  padding: 50px;
+}
+contact-info { /* For the contact info section in the footer */
+padding: 10px; 
+display: inline-block;
 }
