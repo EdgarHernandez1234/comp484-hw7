@@ -4,7 +4,7 @@
 # - color 3 #1f2933
 # - color 4 #6b7280
 */
-/* .content-wrap will be at the bottom */
+
 :root {
   --color-bg: #f6f7f9;
   --color-primary: #64789a; /* h2 and Header color */
@@ -13,92 +13,122 @@
   --color-muted: #6b7280;   /* secondary text */
 }
 
-/* Global styles 
+/* Global styles
 ------------------------------------*/
-
-body {
-  font-family: "Gelasio", Arial; /* Gelasio is the google font I imported, Arial for body */
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.5;
-  margin: 0; /* Remove default margin */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-/* Header & Footer 
+body {
+  font-family: "Gelasio", Arial;
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0; /* remove default page margin */
+}
+
+/* finalized content wrap */
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden; /* clear floats */
+}
+
+/* Header & Footer
 ------------------------------------*/
 header {
   background: var(--color-primary);
   color: #fff;
-  padding: 36px 24px;
 }
+
 footer {
   background: var(--color-accent);
   color: #fff;
   padding: 20px 24px;
   text-align: center;
   font-size: 14px;
-  text-align: center;
 }
-header img { /* For the profile picture in header */
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
-  border-radius: 50%;
+
+.contact-info a { /* footer links spacing */
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Columns narrow and wide */
+.column-narrow {
+  width: 30%;
   float: left;
-  margin-right: 18px;
+  padding-right: 3%;
+  min-height: 175px;
 }
+
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
 header h1 {  /* For h1 in header */
   margin: 0;
   font-size: 28px;
   letter-spacing: 0.4px;
 }
+
 header h2 { /* For h2 in header */
-  margin: 4px 0 8px 0;
-  margin-top: 0;
-  font-weight: 500;
-  color: rgba(230,238,252,0.95);
-}
-header p { /* For p in header */
   margin: 0;
-  color: rgba(241,246,255,0.95);
+  font-weight: 500;
+  color: rgba(230, 238, 252, 0.95);
 }
 
+header p { /* For p in header */
+  margin: 12px 0 0;
+  color: rgba(241, 246, 255, 0.95);
+}
+
+/* Projects & Education
+------------------------------------*/
 main {
-  padding: 32px 24px;
+  padding: 0;
 }
 
 section {
   background: #fff;
   border-radius: 6px;
   padding: 18px;
-  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
 }
 
-/* Projects & Education
-------------------------------------*/
-h2 {
+h2{
   font-size: 18px;
   font-weight: 600;
   color: var(--color-primary);
-  font-family: "Source Sans 3", sans-serif;  /* Source Sans 3 is the google font I imported for section headers, sans-serif as fallback */
-  margin-top: 0; /* Remove default top margin */
+  font-family: "Source Sans 3", sans-serif;
+  margin-top: 0; /* removes extra top spacing inside .content-wrap */
 }
-h3 {
+ h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: "Source Sans 3", sans-serif;
+  margin-top: 0; /* removes extra top spacing inside .content-wrap */
+ }
+ h4 {
   margin: 8px 0;
   font-size: 16px;
-  color: var(--color-text);
   font-family: "Gelasio", serif;
 }
 
-ul { margin: 8px 0 0 20px; color: var(--color-muted); } /* For lists in projects and education sections */
-
-
-.content-wrap { /* Second part complete */
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 50px;
+ul {
+  margin: 8px 0 0 20px;
+  color: var(--color-muted);
 }
-contact-info { /* For the contact info section in the footer */
-padding: 10px; 
-display: inline-block;
+li {
+  margin-bottom: 6px;
 }
